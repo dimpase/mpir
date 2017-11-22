@@ -24,4 +24,4 @@ script:
     fi
   - $CC --version
   - ./autogen.sh
-  - ./configure && make && make check
+  - ./configure --enable-assert --disable-shared --enable-alloca=debug CFLAGS="-g" && make && make check
